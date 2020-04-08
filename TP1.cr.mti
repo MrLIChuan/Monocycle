@@ -1,0 +1,230 @@
+{C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre PC.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity registre_PC
+-- Compiling architecture ARCHI of registre_PC
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/dec_7seg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/dec_7seg.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity dec_7seg
+-- Compiling architecture ARCHI of dec_7seg
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/multiplexeur 2.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/multiplexeur 2.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity multiplexeur_2
+-- Compiling architecture ARCHI of multiplexeur_2
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Décodeur d'instructions.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Décodeur d'instructions.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity DecodeurInstructions
+-- Compiling architecture ARCHI of DecodeurInstructions
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/ALU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/ALU.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ALU
+-- Compiling architecture ARCHI of ALU
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity assemblage_unite_traitement_tb
+-- Compiling architecture archi1 of assemblage_unite_traitement_tb
+-- Loading entity assemblage_unite_traitement
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mux compteur PC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mux compteur PC.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity muxCompteurPC
+-- Compiling architecture ARCHI of muxCompteurPC
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre 32 bits avec commande de chargement.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre 32 bits avec commande de chargement.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity registreComCharg
+-- Compiling architecture ARCHI of registreComCharg
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity assemblage_final
+-- Compiling architecture ARCHI1 of assemblage_final
+-- Loading entity UniteGestionInstructions
+-- Loading entity Unitecontrole
+-- Loading entity assemblage_unite_traitement
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UniteGestionInstructions
+-- Compiling architecture ARCHI1 of UniteGestionInstructions
+-- Loading entity extension_signe
+-- Loading entity muxCompteurPC
+-- Loading entity registre_PC
+-- Loading entity memoire_instructions
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de traitement tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de traitement tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity unite_traitement_tb
+-- Compiling architecture archi1 of unite_traitement_tb
+-- Loading entity unite_traitement
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/diviseur_freq.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/diviseur_freq.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity diviseur_freq
+-- Compiling architecture ARCHI1 of diviseur_freq
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire de données.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire de données.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memoire_donnees
+-- Compiling architecture ARCHI1 of memoire_donnees
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire instructions.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire instructions.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity memoire_instructions
+-- Compiling architecture ARCHI1 of memoire_instructions
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage_unite_traitement tb.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage_unite_traitement tb.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity assemblage_unite_traitement_tb
+-- Compiling architecture archi1 of assemblage_unite_traitement_tb
+-- Loading entity assemblage_unite_traitement
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de traitement.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de traitement.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity unite_traitement
+-- Compiling architecture ARCHI1 of unite_traitement
+-- Loading entity multiplexeur_2
+-- Loading entity BancRegistres32
+-- Loading entity ALU
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Unitecontrole
+-- Compiling architecture ARCHI of Unitecontrole
+-- Loading entity extension_signe
+-- Loading entity registreComCharg
+-- Loading entity DecodeurInstructions
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Extension de signe.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Extension de signe.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity extension_signe
+-- Compiling architecture ARCHI of extension_signe
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage_unite_traitement.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage_unite_traitement.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity assemblage_unite_traitement
+-- Compiling architecture ARCHI1 of assemblage_unite_traitement
+-- Loading entity multiplexeur_2
+-- Loading entity BancRegistres32
+-- Loading entity extension_signe
+-- Loading entity ALU
+-- Loading entity memoire_donnees
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity assemblage
+-- Compiling architecture ARCHI of assemblage
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity diviseur_freq
+-- Loading entity assemblage_final
+-- Loading entity dec_7seg
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Banc de registres.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Banc de registres.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity BancRegistres32
+-- Compiling architecture ARCHI1 of BancRegistres32
+
+} {} {}} {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd}
+Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity assemblage_unite_traitement
+-- Compiling architecture ARCHI1 of assemblage_unite_traitement
+-- Loading entity multiplexeur_2
+-- Loading entity BancRegistres32
+-- Loading entity extension_signe
+-- Loading entity ALU
+-- Loading entity memoire_donnees
+
+} {} {}}
