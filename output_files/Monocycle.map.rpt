@@ -1,0 +1,771 @@
+Analysis & Synthesis report for Monocycle
+Mon Jun 24 02:25:06 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|extension_signe:G1
+ 13. Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|Unitecontrole:G2|extension_signe:G1
+ 14. Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G1
+ 15. Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|extension_signe:G3
+ 16. Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G4
+ 17. Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G7
+ 18. Port Connectivity Checks: "assemblage_final:AssemblageFinal|Unitecontrole:G2|extension_signe:G1"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Jun 24 02:25:06 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; Monocycle                                   ;
+; Top-level Entity Name              ; assemblage                                  ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 4,309                                       ;
+;     Total combinational functions  ; 2,071                                       ;
+;     Dedicated logic registers      ; 2,337                                       ;
+; Total registers                    ; 2337                                        ;
+; Total pins                         ; 16                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; assemblage         ; Monocycle          ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                             ;
++--------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
++--------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; Unité de gestion des instructions.vhd            ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd            ;         ;
+; Unité de contrôle.vhd                            ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd                            ;         ;
+; Registre PC.vhd                                  ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre PC.vhd                                  ;         ;
+; Registre 32 bits avec commande de chargement.vhd ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre 32 bits avec commande de chargement.vhd ;         ;
+; Mémoire instructions.vhd                         ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire instructions.vhd                         ;         ;
+; Mémoire de données.vhd                           ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire de données.vhd                           ;         ;
+; Mux compteur PC.vhd                              ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mux compteur PC.vhd                              ;         ;
+; multiplexeur 2.vhd                               ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/multiplexeur 2.vhd                               ;         ;
+; Extension de signe.vhd                           ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Extension de signe.vhd                           ;         ;
+; Décodeur d'instructions.vhd                      ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Décodeur d'instructions.vhd                      ;         ;
+; diviseur_freq.vhd                                ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/diviseur_freq.vhd                                ;         ;
+; dec_7seg.vhd                                     ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/dec_7seg.vhd                                     ;         ;
+; Banc de registres.vhd                            ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Banc de registres.vhd                            ;         ;
+; assemblage.vhd                                   ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd                                   ;         ;
+; Assemblage unité traitement.vhd                  ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd                  ;         ;
+; Assemblage final.vhd                             ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd                             ;         ;
+; ALU.vhd                                          ; yes             ; User VHDL File  ; C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/ALU.vhd                                          ;         ;
++--------------------------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimated Total logic elements              ; 4,309                            ;
+;                                             ;                                  ;
+; Total combinational functions               ; 2071                             ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 1816                             ;
+;     -- 3 input functions                    ; 214                              ;
+;     -- <=2 input functions                  ; 41                               ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 1943                             ;
+;     -- arithmetic mode                      ; 128                              ;
+;                                             ;                                  ;
+; Total registers                             ; 2337                             ;
+;     -- Dedicated logic registers            ; 2337                             ;
+;     -- I/O registers                        ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 16                               ;
+;                                             ;                                  ;
+; Embedded Multiplier 9-bit elements          ; 0                                ;
+;                                             ;                                  ;
+; Maximum fan-out node                        ; diviseur_freq:diviseur|LessThan1 ;
+; Maximum fan-out                             ; 2311                             ;
+; Total fan-out                               ; 15319                            ;
+; Average fan-out                             ; 3.45                             ;
++---------------------------------------------+----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                              ; Entity Name                 ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+; |assemblage                            ; 2071 (0)            ; 2337 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |assemblage                                                                                      ; assemblage                  ; work         ;
+;    |assemblage_final:AssemblageFinal|  ; 2020 (0)            ; 2311 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal                                                     ; assemblage_final            ; work         ;
+;       |UniteGestionInstructions:G1|    ; 33 (0)              ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|UniteGestionInstructions:G1                         ; UniteGestionInstructions    ; work         ;
+;          |memoire_instructions:G4|     ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|memoire_instructions:G4 ; memoire_instructions        ; work         ;
+;          |muxCompteurPC:G2|            ; 6 (6)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|muxCompteurPC:G2        ; muxCompteurPC               ; work         ;
+;          |registre_PC:G3|              ; 6 (6)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|registre_PC:G3          ; registre_PC                 ; work         ;
+;       |Unitecontrole:G2|               ; 20 (0)              ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|Unitecontrole:G2                                    ; Unitecontrole               ; work         ;
+;          |DecodeurInstructions:G3|     ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|Unitecontrole:G2|DecodeurInstructions:G3            ; DecodeurInstructions        ; work         ;
+;          |registreComCharg:G2|         ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|Unitecontrole:G2|registreComCharg:G2                ; registreComCharg            ; work         ;
+;       |assemblage_unite_traitement:G3| ; 1967 (0)            ; 2304 (0)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3                      ; assemblage_unite_traitement ; work         ;
+;          |ALU:G5|                      ; 106 (106)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|ALU:G5               ; ALU                         ; work         ;
+;          |BancRegistres32:G2|          ; 339 (339)           ; 256 (256)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2   ; BancRegistres32             ; work         ;
+;          |memoire_donnees:G6|          ; 1418 (1418)         ; 2048 (2048)               ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|memoire_donnees:G6   ; memoire_donnees             ; work         ;
+;          |multiplexeur_2:G1|           ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G1    ; multiplexeur_2              ; work         ;
+;          |multiplexeur_2:G4|           ; 32 (32)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G4    ; multiplexeur_2              ; work         ;
+;          |multiplexeur_2:G7|           ; 67 (67)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G7    ; multiplexeur_2              ; work         ;
+;    |dec_7seg:Dec7Seg|                  ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|dec_7seg:Dec7Seg                                                                     ; dec_7seg                    ; work         ;
+;    |diviseur_freq:diviseur|            ; 37 (37)             ; 26 (26)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |assemblage|diviseur_freq:diviseur                                                               ; diviseur_freq               ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------+-----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                       ;
++-------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                   ; Reason for Removal                     ;
++-------------------------------------------------------------------------------------------------+----------------------------------------+
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][31]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][31]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][31]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][31]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][31]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][31]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][31] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][31] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][30]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][30]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][30]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][30]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][30]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][30]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][30] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][30] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][29]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][29]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][29]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][29]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][29]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][29]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][29] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][29] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][28]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][28]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][28]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][28]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][28]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][28]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][28] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][28] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][27]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][27]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][27]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][27]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][27]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][27]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][27] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][27] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][26]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][26]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][26]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][26]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][26]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][26]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][26] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][26] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][25]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][25]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][25]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][25]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][25]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][25]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][25] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][25] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][24]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][24]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][24]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][24]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][24]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][24]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][24] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][24] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][23]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][23]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][23]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][23]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][23]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][23]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][23] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][23] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][22]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][22]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][22]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][22]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][22]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][22]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][22] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][22] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][21]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][21]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][21]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][21]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][21]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][21]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][21] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][21] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][20]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][20]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][20]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][20]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][20]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][20]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][20] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][20] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][19]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][19]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][19]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][19]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][19]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][19]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][19] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][19] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][18]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][18]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][18]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][18]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][18]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][18]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][18] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][18] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][17]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][17]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][17]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][17]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][17]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][17]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][17] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][17] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][16]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][16]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][16]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][16]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][16]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][16]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][16] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][16] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][15]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][15]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][15]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][15]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][15]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][15]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][15] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][15] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][14]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][14]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][14]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][14]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][14]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][14]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][14] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][14] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][13]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][13]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][13]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][13]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][13]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][13]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][13] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][13] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][12]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][12]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][12]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][12]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][12]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][12]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][12] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][12] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][11]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][11]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][11]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][11]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][11]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][11]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][11] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][11] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][10]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][10]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][10]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][10]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][10]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][10]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][10] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][10] ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][9]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][9]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][9]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][9]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][9]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][9]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][9]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][9]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][8]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][8]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][8]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][8]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][8]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][8]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][8]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][8]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][7]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][7]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][7]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][7]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][7]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][7]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][7]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][7]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][6]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][6]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][6]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][6]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][6]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][6]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][6]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][6]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][5]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][5]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][5]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][5]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][5]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][5]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][5]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][5]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][4]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][4]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][4]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][4]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][4]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][4]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][4]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][4]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][3]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][3]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][3]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][3]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][3]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][3]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][3]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][3]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][2]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][2]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][2]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][2]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][2]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][2]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][2]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][2]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][1]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][1]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][1]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][1]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][1]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][1]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][1]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][1]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[4][0]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[5][0]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[6][0]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[7][0]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[8][0]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[9][0]   ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[10][0]  ; Stuck at GND due to stuck port data_in ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[11][0]  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 256                                                         ;                                        ;
++-------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2337  ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 289   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2304  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                             ;
++------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                              ; Fan out ;
++------------------------------------------------------------------------------------------------+---------+
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[15][4] ; 2       ;
+; assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Banc[15][5] ; 2       ;
+; Total number of inverted registers = 2                                                         ;         ;
++------------------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|ALU:G5|Mux28             ;
+; 5:1                ; 26 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G7|S[25]  ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Mux18 ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |assemblage|assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2|Mux42 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|extension_signe:G1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; n              ; 24    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|Unitecontrole:G2|extension_signe:G1 ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; n              ; 2     ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G1 ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|extension_signe:G3 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G4 ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G7 ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+; n              ; 32    ; Signed Integer                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "assemblage_final:AssemblageFinal|Unitecontrole:G2|extension_signe:G1" ;
++------+-------+----------+------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                ;
++------+-------+----------+------------------------------------------------------------------------+
+; e[1] ; Input ; Info     ; Stuck at GND                                                           ;
++------+-------+----------+------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 16                          ;
+; cycloneiii_ff         ; 2337                        ;
+;     CLR               ; 1                           ;
+;     CLR SCLR          ; 26                          ;
+;     CLR SLD           ; 6                           ;
+;     ENA               ; 2048                        ;
+;     ENA CLR           ; 256                         ;
+; cycloneiii_lcell_comb ; 2073                        ;
+;     arith             ; 128                         ;
+;         2 data inputs ; 30                          ;
+;         3 data inputs ; 98                          ;
+;     normal            ; 1945                        ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 116                         ;
+;         4 data inputs ; 1816                        ;
+;                       ;                             ;
+; Max LUT depth         ; 21.30                       ;
+; Average LUT depth     ; 11.26                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:11     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Mon Jun 24 02:23:50 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Monocycle -c Monocycle
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file unité de traitement.vhd
+    Info (12022): Found design unit 1: unite_traitement-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de traitement.vhd Line: 13
+    Info (12023): Found entity 1: unite_traitement File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de traitement.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file unité de gestion des instructions.vhd
+    Info (12022): Found design unit 1: UniteGestionInstructions-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd Line: 13
+    Info (12023): Found entity 1: UniteGestionInstructions File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file unité de contrôle.vhd
+    Info (12022): Found design unit 1: Unitecontrole-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd Line: 17
+    Info (12023): Found entity 1: Unitecontrole File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registre pc.vhd
+    Info (12022): Found design unit 1: registre_PC-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre PC.vhd Line: 12
+    Info (12023): Found entity 1: registre_PC File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file registre 32 bits avec commande de chargement.vhd
+    Info (12022): Found design unit 1: registreComCharg-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre 32 bits avec commande de chargement.vhd Line: 12
+    Info (12023): Found entity 1: registreComCharg File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Registre 32 bits avec commande de chargement.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mémoire instructions.vhd
+    Info (12022): Found design unit 1: memoire_instructions-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire instructions.vhd Line: 11
+    Info (12023): Found entity 1: memoire_instructions File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire instructions.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mémoire de données.vhd
+    Info (12022): Found design unit 1: memoire_donnees-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire de données.vhd Line: 12
+    Info (12023): Found entity 1: memoire_donnees File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire de données.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux compteur pc.vhd
+    Info (12022): Found design unit 1: muxCompteurPC-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mux compteur PC.vhd Line: 11
+    Info (12023): Found entity 1: muxCompteurPC File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mux compteur PC.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multiplexeur 2.vhd
+    Info (12022): Found design unit 1: multiplexeur_2-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/multiplexeur 2.vhd Line: 15
+    Info (12023): Found entity 1: multiplexeur_2 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/multiplexeur 2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file extension de signe.vhd
+    Info (12022): Found design unit 1: extension_signe-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Extension de signe.vhd Line: 13
+    Info (12023): Found entity 1: extension_signe File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Extension de signe.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file décodeur d'instructions.vhd
+    Info (12022): Found design unit 1: DecodeurInstructions-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Décodeur d'instructions.vhd Line: 15
+    Info (12023): Found entity 1: DecodeurInstructions File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Décodeur d'instructions.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file diviseur_freq.vhd
+    Info (12022): Found design unit 1: diviseur_freq-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/diviseur_freq.vhd Line: 13
+    Info (12023): Found entity 1: diviseur_freq File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/diviseur_freq.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file dec_7seg.vhd
+    Info (12022): Found design unit 1: dec_7seg-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/dec_7seg.vhd Line: 15
+    Info (12023): Found entity 1: dec_7seg File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/dec_7seg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file banc de registres.vhd
+    Info (12022): Found design unit 1: BancRegistres32-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Banc de registres.vhd Line: 12
+    Info (12023): Found entity 1: BancRegistres32 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Banc de registres.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file assemblage.vhd
+    Info (12022): Found design unit 1: assemblage-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd Line: 13
+    Info (12023): Found entity 1: assemblage File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file assemblage unité traitement.vhd
+    Info (12022): Found design unit 1: assemblage_unite_traitement-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 17
+    Info (12023): Found entity 1: assemblage_unite_traitement File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file assemblage final.vhd
+    Info (12022): Found design unit 1: assemblage_final-ARCHI1 File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd Line: 10
+    Info (12023): Found entity 1: assemblage_final File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-ARCHI File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/ALU.vhd Line: 13
+    Info (12023): Found entity 1: ALU File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/ALU.vhd Line: 5
+Info (12127): Elaborating entity "assemblage" for the top level hierarchy
+Info (12129): Elaborating entity "diviseur_freq" using architecture "A:archi1" for hierarchy "diviseur_freq:diviseur" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd Line: 20
+Info (12129): Elaborating entity "assemblage_final" using architecture "A:archi1" for hierarchy "assemblage_final:AssemblageFinal" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd Line: 23
+Info (12129): Elaborating entity "UniteGestionInstructions" using architecture "A:archi1" for hierarchy "assemblage_final:AssemblageFinal|UniteGestionInstructions:G1" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd Line: 18
+Info (12129): Elaborating entity "extension_signe" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|extension_signe:G1" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd Line: 17
+Info (12129): Elaborating entity "muxCompteurPC" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|muxCompteurPC:G2" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd Line: 20
+Info (12129): Elaborating entity "registre_PC" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|registre_PC:G3" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd Line: 23
+Info (12129): Elaborating entity "memoire_instructions" using architecture "A:archi1" for hierarchy "assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|memoire_instructions:G4" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de gestion des instructions.vhd Line: 27
+Info (12129): Elaborating entity "Unitecontrole" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|Unitecontrole:G2" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd Line: 22
+Info (12129): Elaborating entity "extension_signe" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|Unitecontrole:G2|extension_signe:G1" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd Line: 27
+Info (12129): Elaborating entity "registreComCharg" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|Unitecontrole:G2|registreComCharg:G2" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd Line: 31
+Info (12129): Elaborating entity "DecodeurInstructions" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|Unitecontrole:G2|DecodeurInstructions:G3" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Unité de contrôle.vhd Line: 34
+Info (12129): Elaborating entity "assemblage_unite_traitement" using architecture "A:archi1" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage final.vhd Line: 29
+Info (12129): Elaborating entity "multiplexeur_2" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G1" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 22
+Info (12129): Elaborating entity "BancRegistres32" using architecture "A:archi1" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|BancRegistres32:G2" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 25
+Info (12129): Elaborating entity "extension_signe" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|extension_signe:G3" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 30
+Info (12129): Elaborating entity "multiplexeur_2" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|multiplexeur_2:G4" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 33
+Info (12129): Elaborating entity "ALU" using architecture "A:archi" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|ALU:G5" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 36
+Info (12129): Elaborating entity "memoire_donnees" using architecture "A:archi1" for hierarchy "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|memoire_donnees:G6" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Assemblage unité traitement.vhd Line: 40
+Info (12129): Elaborating entity "dec_7seg" using architecture "A:archi" for hierarchy "dec_7seg:Dec7Seg" File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/assemblage.vhd Line: 25
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "assemblage_final:AssemblageFinal|assemblage_unite_traitement:G3|memoire_donnees:G6|Banc" is uninferred due to asynchronous read logic File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire de données.vhd Line: 28
+    Info (276013): RAM logic "assemblage_final:AssemblageFinal|UniteGestionInstructions:G1|memoire_instructions:G4|Banc" is uninferred because MIF is not supported for the selected family File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Mémoire instructions.vhd Line: 37
+Info (13000): Registers with preset signals will power-up high File: C:/Users/LI Chuan/Desktop/VHDL_EI2I3_II_LI_Chuan/PartieMonocycle/Banc de registres.vhd Line: 37
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 4389 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 4373 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Mon Jun 24 02:25:07 2019
+    Info: Elapsed time: 00:01:17
+    Info: Total CPU time (on all processors): 00:00:51
+
+
